@@ -1,0 +1,8 @@
+{
+  "name": "Hub testing",
+  "description": "The idea is to test multiple cases and monitor if the extensions are working well.",
+  "version": "1.0.0",
+  "audience": ["distributor", "reseller"],
+  "readme_url": "https://github.com/cloudblue/eaas-e2e-events-hub/README.md",
+  "changelog_url": "https://github.com/cloudblue/eaas-e2e-events-hub/CHANGELOG.md"
+}
