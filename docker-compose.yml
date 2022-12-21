@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  hub_testing_dev:
+    container_name: hub_testing_dev
+    build:
+      context: .
+    working_dir: /extension
+    command: cextrun -r --no-rich-logging
+    volumes: 
+      - .:/extension
+    env_file:
+      - .hub_testing_dev.env
+
+  hub_testing_bash:
+    container_name: hub_testing_bash
+    build:
+      context: .
+    working_dir: /extension
+    command: /bin/bash
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/extension
+    env_file:
+      - .hub_testing_dev.env
+
+  hub_testing_test:
+    container_name: hub_testing_test
+    build:
+      context: .
+    working_dir: /extension
+    command: extension-test
+    volumes:
+      - .:/extension
+    env_file:
+      - .hub_testing_dev.env
